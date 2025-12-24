@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Digital Book</title>
+    <title>Simple Book - Your Digital Diary</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#3498db">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta tags for better sharing -->
+    <meta name="description" content="A peaceful digital book for your thoughts and stories. Simple, calm, and beautiful.">
+    <meta property="og:title" content="Simple Book - Your Digital Diary">
+    <meta property="og:description" content="Write your thoughts in this peaceful digital book">
+    <meta property="og:image" content="one.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload logo for faster loading -->
+    <link rel="preload" href="one.jpg" as="image">
 </head>
 <body class="theme-light">
-    <!-- Theme Selector -->
+    <!-- Theme Selector with Logo -->
     <div class="theme-selector">
+        <!-- Logo Image -->
+        <div class="logo-container">
+            <img src="one.jpg" alt="Simple Book Logo" class="site-logo" width="40" height="40">
+            <span class="logo-text">Simple Book</span>
+        </div>
+        
         <button class="theme-btn theme-light-btn" data-theme="light">
             <i class="fas fa-sun"></i> Light
         </button>
@@ -28,6 +55,11 @@
         
         <!-- Bookmark -->
         <div class="bookmark"></div>
+        
+        <!-- Logo inside book for branding -->
+        <div class="book-logo">
+            <img src="one.jpg" alt="Book Logo" width="60" height="60">
+        </div>
         
         <!-- Pages will be inserted here by JavaScript -->
         <div id="pages-container"></div>
@@ -69,6 +101,15 @@
             <i class="fas fa-fast-forward"></i>
         </button>
     </div>
+
+    <!-- Footer with logo -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <img src="one.jpg" alt="Simple Book Logo" width="30" height="30">
+            <span>Simple Book © 2024</span>
+            <span class="footer-tagline">Write your peace</span>
+        </div>
+    </footer>
 
     <script src="pages.js"></script>
     <script src="script.js"></script>
