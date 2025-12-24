@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="theme-light">
+    <!-- Theme Selector -->
+    <div class="theme-selector">
+        <button class="theme-btn theme-light-btn" data-theme="light">
+            <i class="fas fa-sun"></i> Light
+        </button>
+        <button class="theme-btn theme-dark-btn" data-theme="dark">
+            <i class="fas fa-moon"></i> Dark
+        </button>
+    </div>
+
+    <!-- Book Container -->
+    <div class="book-container">
+        <!-- Decorative corners -->
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        
+        <!-- Bookmark -->
+        <div class="bookmark"></div>
+        
+        <!-- Pages will be inserted here by JavaScript -->
+        <div id="pages-container"></div>
+        
+        <!-- Navigation -->
+        <div class="page-navigation">
+            <button class="nav-btn prev-btn">
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            
+            <div class="page-indicator">
+                <span id="currentPage">1</span> / <span id="totalPages">20</span>
+            </div>
+            
+            <button class="nav-btn next-btn">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Quick Navigation -->
+        <div class="quick-nav">
+            <input type="range" id="pageSlider" min="1" max="20" value="1">
+            <button id="jumpBtn" class="jump-btn">Go to Page</button>
+        </div>
+    </div>
+
+    <!-- Page Controls -->
+    <div class="page-controls">
+        <button class="control-btn" id="firstPage" title="First Page">
+            <i class="fas fa-fast-backward"></i>
+        </button>
+        <button class="control-btn" id="prevPage" title="Previous Page">
+            <i class="fas fa-step-backward"></i>
+        </button>
+        <button class="control-btn" id="nextPage" title="Next Page">
+            <i class="fas fa-step-forward"></i>
+        </button>
+        <button class="control-btn" id="lastPage" title="Last Page">
+            <i class="fas fa-fast-forward"></i>
+        </button>
+    </div>
+
+    <script src="pages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
